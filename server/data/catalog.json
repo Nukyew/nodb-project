@@ -1,0 +1,146 @@
+[
+    {
+        "id": 0,
+        "name": "50,000mAH Portable Power Bank",
+        "image": "https://images-na.ssl-images-amazon.com/images/I/712rmPlB9HL._SL1500_.jpg",
+        "price": 129.99,
+        "category": "cool",
+        "url": "https://tinyurl.com/y4aozrrn"
+    },
+    {
+        "id": 1,
+        "name": "Container House",
+        "image": "https://images-na.ssl-images-amazon.com/images/I/41cLOSK2vwL.jpg",
+        "price": 36800.00,
+        "category": "cool",
+        "url": "https://tinyurl.com/yyn9fbzo"
+    },
+    {
+        "id": 2,
+        "name": "Nintendo Switch",
+        "image": "https://images-na.ssl-images-amazon.com/images/I/41zJqPi7W7L.jpg",
+        "price": 299.00,
+        "category": "cool",
+        "url": "https://tinyurl.com/y4xnvyxa"
+    },
+    {
+        "id": 3,
+        "name": "Creepy Coin Bank",
+        "image": "https://images-na.ssl-images-amazon.com/images/I/51I6ltgsolL._SL1001_.jpg",
+        "price": 13.99,
+        "category": "weird",
+        "url": "https://tinyurl.com/y53g3jnx"
+    },
+    {
+        "id": 4,
+        "name": "Nic Cage Sequin Cover",
+        "image": "https://images-na.ssl-images-amazon.com/images/I/81yN%2B9mmX4L._SL1500_.jpg",
+        "price": 9.99,
+        "category": "weird",
+        "url": "https://tinyurl.com/y5vyuuu6"
+    },
+    {
+        "id": 5,
+        "name": "Squirrel Hand Puppet",
+        "image": "https://images-na.ssl-images-amazon.com/images/I/613rrhRTmEL._SL1200_.jpg",
+        "price": 9.99,
+        "category": "weird",
+        "url": "https://tinyurl.com/y5qhvdmj"
+    },
+    {
+        "id": 6,
+        "name": "Headlighter Fluid",
+        "image": "https://images-na.ssl-images-amazon.com/images/I/41uHUfOydIL.jpg",
+        "price": 9.99,
+        "category": "stupid",
+        "url": "https://tinyurl.com/yy5yelrw"
+    },
+    {
+        "id": 7,
+        "name": "Dehydrated Water",
+        "image": "https://images-na.ssl-images-amazon.com/images/I/71TtgTzJ8kL._SL1500_.jpg",
+        "price": 10.99,
+        "category": "stupid",
+        "url": "https://tinyurl.com/yyekazqc"
+    },
+    {
+        "id": 8,
+        "name": "Bacon Soap",
+        "image": "https://images-na.ssl-images-amazon.com/images/I/41IOGj8DZvL.jpg",
+        "price": 7.95,
+        "category": "stupid",
+        "url": "https://tinyurl.com/y5xvawxn"
+    },
+    {
+        "id": 9,
+        "name": "Burrito Blanket",
+        "image": "https://images-na.ssl-images-amazon.com/images/I/71SqJ%2BXGDCL._SL1200_.jpg",
+        "price": 23.99,
+        "category": "funny",
+        "url": "https://tinyurl.com/y3s6qavt"
+    },
+    {
+        "id": 10,
+        "name": "Potty Putter",
+        "image": "https://images-na.ssl-images-amazon.com/images/I/71QQGY99mmL._SL1100_.jpg",
+        "price": 11.90,
+        "category": "funny",
+        "url": "https://tinyurl.com/y4928cs6"
+    },
+    {
+        "id": 11,
+        "name": "Useless Box",
+        "image": "https://images-na.ssl-images-amazon.com/images/I/71qjX82ozKL._SL1500_.jpg",
+        "price": 14.99,
+        "category": "funny",
+        "url": "https://tinyurl.com/yxz4r7fu"
+    },
+    {
+        "id": 12,
+        "name": "My First Fire",
+        "image": "https://images-na.ssl-images-amazon.com/images/I/81GZLHzxW8L._SL1500_.jpg",
+        "price": 7.99,
+        "category": "heartwarming",
+        "url": "https://tinyurl.com/y3k8olg9"
+    },
+    {
+        "id": 13,
+        "name": "Giant Teddy Bear",
+        "image": "https://images-na.ssl-images-amazon.com/images/I/41mr66apZcL.jpg",
+        "price": 139.99,
+        "category": "heartwarming",
+        "url": "https://tinyurl.com/y5q8wwn7"
+    },
+    {
+        "id": 14,
+        "name": "Candle Pack",
+        "image": "https://images-na.ssl-images-amazon.com/images/I/71PXYWOGK0L._SL1500_.jpg",
+        "price": 22.99,
+        "category": "heartwarming",
+        "url": "https://tinyurl.com/yyog8cau"
+    },
+    {
+        "id": 15,
+        "name": "Bosendorfer",
+        "image": "https://img.klaviano.com/files/04-2015/ad322451/large_14296095461345981330.jpg",
+        "price": 500000.00,
+        "category": "jon",
+        "url": "https://www.boesendorfer.com/en/pianos/pianos/Concert-Grand-290-Imperial"
+    },
+    {
+        "id": 16,
+        "name": "Yamaha",
+        "image": "https://europe.yamaha.com/en/files/8CF40C54998241C394E902F817FEDF97_12073_2400x2400_ca94953596ac4c3f6c4afc474facd99b.jpg",
+        "price": 8000.00,
+        "category": "jon",
+        "url": "https://usa.yamaha.com/products/musical_instruments/pianos/premium_pianos/index.html"
+    },
+    {
+        "id": 17,
+        "name": "Steinway",
+        "image": "https://www.pianoteq.com/images/instruments/fullsize/steinway-model-D.jpg",
+        "price": 157000.00,
+        "category": "jon",
+        "url": "https://www.steinway.com/pianos/steinway/grand/model-d"
+    }
+]
