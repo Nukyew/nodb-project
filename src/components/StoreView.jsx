@@ -1,35 +1,32 @@
 import React, {Component} from 'react'
 import Product from './Product'
 import CategorySelect from './CategorySelect'
-import axios from 'axios'
 
 export default class StoreView extends Component {
     state = {
-        selectedCategory: '',
-        productsView: []
+        /* selectedCategory: '', */
+        /* productsView: [] */
+        derp: "asdfasdf"
     }
 
-    selectCategory = (category) => {
-        /* this.setState({
-            selectedCategory: category
-        }) */
+    /* selectCategory = (category) => {
         axios.get(`/api/catalog?category=${category}`).then(res => {
             this.setState({
                 productsView: res.data,
                 selectedCategory: category
             })
         })
-    }
+    } */
 
     render(){
-        let products = this.state.productsView.map((el, i) => {
+        let products = this.props.productsView.map((el, i) => {
             return (
                 <Product addToCart={this.props.addToCart} key={el.id} product={el}/>
             )
         })
         return(
             <section>
-                <CategorySelect selectCategory={this.selectCategory}/>
+                <CategorySelect selectCategory={this.props.selectCategory}/>
                 {/* Product below must be mapped based off of criteria */}
                 {products}
             </section>

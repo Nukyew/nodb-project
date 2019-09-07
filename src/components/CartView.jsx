@@ -2,16 +2,20 @@ import React from 'react'
 import axios from 'axios'
 
 export default function CartView(props) {
-    /* axios.get('/api/cart').then(res => {
-        
-    }) */
-    let list = props.productsInCart.map((el, i) => {
+    let list = props.productsInCart.filter(el => {
+        if (el.quantity >= 1){
+            return true
+        }
+    })
+    .map((el, i) => {
         return (
         <div key={el.id + i}>
         <img src={el.image}/>
         <h3>{el.name}</h3>
         <p>${el.price}</p>
-        <input placeholder={el.quantity}/>
+        <button onClick={() => axios.put(`/api/cart/${el.id}/less`)}>less</button>
+        <input type="number" placeholder={el.quantity} onChange={e => props.updateQuantity(el.id, e.target.value)}/>
+        <button onClick={() => axios.put(`/api/cart/${el.id}/add`)}>more</button>
         <button onClick={() => props.removeFromCart(el.id)}>Remove From Cart</button>
         </div>
         )

@@ -27,5 +27,25 @@ module.exports = {
         let index = cart.findIndex(el => el.id === +req.params.id)
         cart.splice(index, 1)
         res.status(200).send(cart)
+    },
+    updateQuantity: (req, res) => {
+        let index = cart.findIndex(el => el.id === +req.params.id)
+        cart[index].quantity = +req.body.quantity
+        res.status(200).send(cart)
+    },
+
+    addOne: (req, res) => {
+        let index = cart.findIndex(el => el.id === +req.params.id)
+        cart[index].quantity = 1 + cart[index].quantity
+        res.status(200).send(cart)
+    },
+    subtractOne: (req, res) => {
+        let index = cart.findIndex(el => el.id === +req.params.id)
+        if (cart[index].quantity >= 1){
+            cart[index].quantity = cart[index].quantity - 1
+            res.status(200).send(cart)
+        } else if (cart[index].quantity === 0){
+            
+        }
     }
 }
