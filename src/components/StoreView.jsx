@@ -24,7 +24,7 @@ export default class StoreView extends Component {
     render(){
         let products = this.state.productsView.map((el, i) => {
             return (
-                <Product key={el.id} product={el}/>
+                <Product addToCart={this.props.addToCart} key={el.id} product={el}/>
             )
         })
         return(

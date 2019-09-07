@@ -1,31 +1,31 @@
-const cart = [{
-    "id": 18,
-    "name": "Dummy Data",
-    "image": "https://images-na.ssl-images-amazon.com/images/I/51I6ltgsolL._SL1001_.jpg",
-    "price": 13.99,
-    "category": "dummy",
-    "url": "https://tinyurl.com/y53g3jnx",
-    "quantity": 0
-},]
+const cart = []
 let id = 0
 
 module.exports = {
     cartItems: (req, res) => {
         res.status(200).send(cart)
     },
-
-    addItem: (req, res) => {
-        let {id, name, image, price, category, url, quantity} = req.body
-        let newItem = {
-            "id": id++,
-            "name": name,
-            "image": image,
-            "price": price,
-            "category": category,
-            "url": url,
-            "quantity": quantity
+    addProduct: (req, res) => {
+        let index = cart.findIndex(el => el.id === req.body.id)
+        if (index === -1){
+            cart.push({
+                "id": req.body.id,
+                "name": req.body.name,
+                "image": req.body.image,
+                "price": req.body.price,
+                "category": req.body.category,
+                "url": req.body.url,
+                "quantity": 1
+            })
+            res.status(200).send(cart)
+        } else{
+            cart[index].quantity = 1 + cart[index].quantity
+            res.status(200).send(cart)
         }
-        cart.push(newItem)
+    },
+    removeItem: (req, res) => {
+        let index = cart.findIndex(el => el.id === +req.params.id)
+        cart.splice(index, 1)
         res.status(200).send(cart)
     }
 }
