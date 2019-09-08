@@ -12,10 +12,10 @@ export default class Product extends Component {
 
     render(){
         return(
-            <div>
+            <div className="products">
                 <img src={this.state.image} />
-                <h3>{this.state.name}</h3>
-                <p>${this.state.price}</p>
+                <h3 title={this.state.name}>{this.state.name}</h3>
+                <p>{this.state.price}</p>
                 <button onClick={() => this.props.addToCart(this.state)}>Add To Cart</button>
             </div>
         )

@@ -1,14 +1,58 @@
-
+@import url('https://fonts.googleapis.com/css?family=Comfortaa|Forum&display=swap');
 
 .App {
   text-align: center;
 }
 
 header {
-  background: orange;
+  background: rgb(251, 205, 120);
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  font-family: Comfortaa, sans-serif;
+  font-size: .8rem;
+  color: #383838;
+  height: 75px;
+}
+
+header h2 {
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+}
+
+/* header h2:hover {
+  text-decoration: underline;
+} */
+
+header h2:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #383838;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+}
+
+header h2:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(0.9);
+  transform: scaleX(0.9);
+}
+
+header h1 {
+  font-family: Forum, sans-serif;
+  font-weight: bolder;
+  font-size: 2.5rem;
+  letter-spacing: 4px;
 }
 
 .navbar {
@@ -16,7 +60,6 @@ header {
   align-items: center;
   width: 200px;
   justify-content: space-around;
-  cursor: pointer;
 }
 
 img {
@@ -26,4 +69,209 @@ img {
 
 select {
   text-transform: capitalize;
+}
+
+.category-select {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Comfortaa, sans-serif;
+  font-size: 1.5rem;
+}
+
+.category-select select {
+  margin-left: 15px;
+}
+
+section {
+  /* background: blue; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.productsview {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  /* min-width: 80vw;
+  max-width: 20%; */
+  width: 90vw;
+  max-width: 1280px;
+  height: auto;
+}
+
+.products {
+  padding: 20px 1vw 0 1vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 450px;
+}
+
+.products p {
+  transform: translate(0, -150%);
+}
+
+.products p:before {
+  content: "$";
+  position: relative;
+}
+
+
+.products h3 {
+  text-overflow: ellipsis;
+  width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.products button {
+  transform: translate(0, -120%)
+}
+
+.products button {
+	background-color: #ffa200;
+	border-radius:28px;
+	cursor: pointer;
+	color: #ffffff;
+	font-size: 12px;
+	padding: 6px 23px;
+}
+.products button:hover {
+	background-color: #ffc157;
+}
+.products button:active {
+	position: relative;
+	top: 1px;
+}
+
+.cart {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.cart-prod{
+  padding-left: 50px;
+  height: 160px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.cart-prod h3 {
+  transform: translate(0%, 80%)
+}
+
+.cart-quantity {
+  width: 100px;
+  display: flex;
+  justify-content: center;
+}
+.cart-quantity input {
+  width: 40px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.cart-prod > button {
+	background-color: #b1b1b1;
+	border-radius:28px;
+	cursor: pointer;
+	color: #ffffff;
+	font-size: 12px;
+  padding: 6px 23px;
+  margin-top: 10px;
+}
+.cart-prod > button:hover {
+	background-color: #dddddd;
+}
+.cart-prod > button:active {
+	position: relative;
+	top: 1px;
+}
+
+.cart-quantity button {
+	background-color:#ffa200;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:14px;
+	padding:6px 10px;
+	text-decoration:none;
+}
+.cart-quantity button:hover {
+	background-color:#ffc157;
+}
+.cart-quantity button:active {
+	position:relative;
+	top:1px;
+}
+
+.flier {
+  pointer-events: none;
+  color: red;
+}
+
+.flier > * {
+/* Adjust animation duration to change the element’s speed */
+        animation: fly 50s linear infinite;
+        pointer-events: none !important;
+	top: 0;
+	left: 0;
+	transform: translateX(-120%) translateY(-120%) rotateZ(0);
+	position: fixed;
+	animation-delay: 1s;
+  z-index: 999999;
+  width: 230px;
+  height: 300px;
+}
+
+ /* Keyframe values control where the element will begin
+    and end its trajectory across the screen. Each rule
+    represents a path the element follows across the screen. */
+
+
+@keyframes fly {
+
+	98.001%, 0% {
+                display: block;
+		transform: translateX(-200%) translateY(100vh) rotateZ(0deg)
+	}
+
+	15% {
+		transform: translateX(100vw) translateY(-100%) rotateZ(180deg)
+	}
+
+	15.001%, 18% {
+		transform: translateX(100vw) translateY(-30%) rotateZ(0deg)
+	}
+
+	40% {
+		transform: translateX(-200%) translateY(3vh) rotateZ(-180deg)
+	}
+
+	40.001%, 43% {
+		transform: translateX(-200%) translateY(-100%) rotateZ(-180deg)
+	}
+
+	65% {
+		transform: translateX(100vw) translateY(50vh) rotateZ(0deg)
+	}
+
+	65.001%, 68% {
+		transform: translateX(20vw) translateY(-200%) rotateZ(180deg)
+	}
+
+	95% {
+		transform: translateX(10vw) translateY(100vh) rotateZ(0deg)
+	}
 }

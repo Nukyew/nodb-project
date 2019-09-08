@@ -26,9 +26,11 @@ export default class StoreView extends Component {
         })
         return(
             <section>
-                <CategorySelect selectCategory={this.props.selectCategory}/>
+                <CategorySelect jonMode={this.props.jonMode} selectCategory={this.props.selectCategory}/>
                 {/* Product below must be mapped based off of criteria */}
-                {products}
+                <div className="productsview">
+                    {products}
+                </div>
             </section>
         )
     }

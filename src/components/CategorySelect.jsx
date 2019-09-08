@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 
 export default class CategorySelect extends Component {
     state = {
-        categories: ['', 'cool', 'weird', 'stupid', 'funny', 'heartwarming', 'jon']
+        categories: ['', 'cool', 'weird', 'stupid', 'funny', 'heartwarming']
     }
 
     render(){
@@ -10,13 +10,14 @@ export default class CategorySelect extends Component {
             return <option key={i} value={el}>{el}</option>
         })
         return(
-            <div>
-                <form>
-                    I'm looking for something
+            <div className="category-select">
+                <p className="category-select-title">I'm looking for something</p>
+                <div>
                     <select onChange={e => this.props.selectCategory(e.target.value)}>
                         {list}
+                        {!this.props.jonMode ? <></> : <option key={'jon'} value='jon'>Jon</option>}
                     </select>
-                </form>
+                </div>
             </div>
         )
     }

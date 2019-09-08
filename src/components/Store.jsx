@@ -13,10 +13,17 @@ export default class Store extends Component {
     componentDidUpdate = () => {
         this.state.productsInCart.forEach((el, i, arr) => {
             if (arr.length >= 1 && el.quantity === 0){
-                arr.splice(i, 1)
-                console.log(el)
+                let array = []
+                array = this.state.productsInCart
+                if (el.quantity === 0){
+                    array.splice(i, 1)
+                }
+                this.setState({
+                    productsInCart: array
+                })
             }
         })
+        console.log(this.state.productsInCart)
     }
 
     selectCategory = (category) => {
@@ -62,7 +69,8 @@ export default class Store extends Component {
         return(
             <main>
                 {this.props.storeView === 'store' ?
-                <StoreView 
+                <StoreView
+                jonMode={this.props.jonMode} 
                 addToCart={this.addToCart}
                 selectCategory={this.selectCategory}
                 productsView={this.state.productsView}
