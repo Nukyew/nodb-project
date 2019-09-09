@@ -9,7 +9,7 @@ class App extends React.Component {
     jonMode: false
   }
 
-  jonModeCheck = () => {
+  componentDidMount = () => {
     let rand = Math.ceil(Math.random() * 10)
     if (rand === 10){
       this.setState({
@@ -25,12 +25,11 @@ class App extends React.Component {
   }
 
   render(){
-    this.jonModeCheck()
     return (
       <div className="App">
-        {!this.state.jonMode ? <></> : <div class="flier">
+        {!this.state.jonMode ? <></> : <div className="flier">
             <img src="https://i.imgur.com/Eb12YIh.png"/>
-            <h1>JON MODE ACTIVATED</h1>
+            <h1>JON MODE ACTIVE</h1>
             </div>}
         <Header switchView={this.switchView}/>
         <Store jonMode={this.state.jonMode} storeView={this.state.storeView}/>

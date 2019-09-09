@@ -48,6 +48,8 @@ export default class Store extends Component {
             this.setState({
                 productsInCart: res.data
             })
+        }).catch(error => {
+            alert(`Coult not add to cart for this reason: ${error.response}`)
         })
     }
 
@@ -62,12 +64,17 @@ export default class Store extends Component {
     updateQuantity = (id, quantity) => {
         axios.put(`/api/cart/${id}`, {quantity: quantity}).then(res => {
             console.log("quantity updated")
+        }).catch(error => {
+            alert(`Could not update quantity for this reason: ${error.response}`)
         })
     }
 
     render(){
         return(
             <main>
+                <div className="counter">
+                    ({this.state.productsInCart.length})
+                </div>
                 {this.props.storeView === 'store' ?
                 <StoreView
                 jonMode={this.props.jonMode} 
