@@ -7,6 +7,9 @@ const cartCtrl = require('./controllers/cartCtrl')
 
 app.use(express.json());
 
+app.get('/api/storeview', cartCtrl.getView)
+app.post('/api/storeview', cartCtrl.setView)
+
 app.get('/api/catalog', catalogCtrl.allProducts)
 
 app.get('/api/cart', cartCtrl.cartItems)

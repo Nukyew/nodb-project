@@ -1,7 +1,15 @@
 const cart = []
+let storeView = ''
 let id = 0
 
 module.exports = {
+    setView: (req, res) => {
+        storeView = req.query.view
+        res.status(200).send(storeView)
+    },
+    getView: (req, res) => {
+        res.status(200).send(storeView)
+    },
     cartItems: (req, res) => {
         res.status(200).send(cart)
     },
@@ -54,7 +62,7 @@ module.exports = {
             cart[index].quantity = cart[index].quantity - 1
             res.status(200).send(cart)
         } else if (cart[index].quantity <= 0){
-            
+
         }
     }
 }

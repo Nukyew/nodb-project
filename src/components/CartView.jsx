@@ -1,5 +1,4 @@
 import React from 'react'
-import axios from 'axios'
 import Quantity from './Quantity'
 import Checkout from './Checkout'
 
@@ -32,6 +31,7 @@ export default function CartView(props) {
                 {props.productsInCart.length === 0 ? 
                 <p>Add something to your cart!</p> :
                 <div>
+                    <p></p>
                     {list}
                     <Checkout productsInCart={props.productsInCart}/>
                 </div>}

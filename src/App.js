@@ -2,10 +2,11 @@ import React from 'react';
 import './App.css';
 import Header from './components/Header'
 import Store from './components/Store'
+import axios from 'axios'
 
 class App extends React.Component {
   state = {
-    storeView: 'store',
+    storeView: '',
     jonMode: false
   }
 
@@ -16,12 +17,22 @@ class App extends React.Component {
         jonMode: true
       })
     }
+    axios.get('/api/storeview').then(res => {
+      this.setState({
+        storeView: res.data
+      })
+    })
   }
 
   switchView = (view) => {
+    axios.post(`/api/storeview/?view=${view}`).then(res => {
       this.setState({
-        storeView: view
+        storeView: res.data
       })
+    })
+      /* this.setState({
+        storeView: view
+      }) */
   }
 
   render(){
