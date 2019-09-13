@@ -30,9 +30,6 @@ class App extends React.Component {
         storeView: res.data
       })
     })
-      /* this.setState({
-        storeView: view
-      }) */
   }
 
   render(){
